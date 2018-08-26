@@ -51,3 +51,17 @@ it('Should verify user with first and last name setted', () => {
   expect(user.lastName).toBeA('string');
 
 });
+
+it('Should async add two numbers', (done) => {
+  utils.asyncAdd(3,4, (result) => {
+    expect(result).toBe(7).toBeA('number');
+    done();
+  });
+});
+
+it('Should async square a number', (done) => {
+  utils.asyncSquare(3, (result)=>{
+    expect(result).toBe(9).toBeA('number');
+    done();
+  });
+});

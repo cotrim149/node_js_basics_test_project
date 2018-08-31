@@ -4,7 +4,9 @@ const expect = require('expect');
 var app = require('./server').app;
 
 describe('Server tests', () => {
+
   describe('GET /', ()=> {
+
     it('Should return hello world response', (done) => {
       request(app)
         .get('/')
@@ -16,9 +18,11 @@ describe('Server tests', () => {
         })
         .end(done);
     });
+
   });
   
   describe('GET /users', () => {
+    
     it('Should return specific user object', (done) => {
       request(app)
         .get('/users')
@@ -31,5 +35,7 @@ describe('Server tests', () => {
         })
         .end(done);
     });
+
   });
+
 });
